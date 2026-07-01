@@ -62,4 +62,187 @@ nav a:hover {
    HEADER / BANNER PRINCIPAL (Identidade Visual Veterinária)
    ========================================================================== */
 .banner {
-    /* Base
+    /* Base branca com cortes geométricos modernos usando as novas cores da clínica */
+    background: 
+        linear-gradient(115deg, var(--vet-primary) 12%, transparent 12.5%),
+        linear-gradient(295deg, var(--vet-accent) 12%, transparent 12.5%),
+        linear-gradient(115deg, var(--vet-accent) 14%, transparent 14.5%),
+        linear-gradient(295deg, var(--vet-primary) 14%, transparent 14.5%),
+        var(--bg-white);
+    
+    color: var(--vet-primary);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+    margin-bottom: 15px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--vet-primary);
+}
+
+.banner p {
+    margin: 8px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--vet-accent); /* Subtítulo com a cor de destaque da saúde */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.banner img {
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.08));
+}
+
+/* ==========================================================================
+   CARDS DE CONTEÚDO (Serviços, Consultas, Avisos)
+   ========================================================================== */
+.card {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    border-left: 6px solid var(--vet-primary); /* Detalhe clínico na lateral esquerda */
+    margin-bottom: 25px;
+}
+
+.card h1, .card h2, .card h3 {
+    color: var(--vet-primary);
+    margin-top: 0;
+}
+
+.card p {
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #E2E8F0;
+    margin: 1.5rem 0;
+}
+
+/* ==========================================================================
+   FORMULÁRIOS E INPUTS (Agendamentos e Cadastro de Pets)
+   ========================================================================== */
+input, select, button {
+    width: 100%;
+    padding: 0.85rem;
+    margin: 0.6rem 0;
+    border: 2px solid #CBD5E1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--vet-primary);
+    box-shadow: 0 0 0 3px rgba(26, 95, 122, 0.15);
+}
+
+/* Botão Principal em Verde Menta (Ação Amigável) */
+button, button[type="submit"] {
+    background-color: var(--vet-accent);
+    color: var(--bg-white);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 6px rgba(87, 197, 182, 0.2);
+}
+
+button:hover {
+    background-color: #40B0A1; /* Menta levemente mais escuro para o efeito hover */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(87, 197, 182, 0.3);
+}
+
+/* ==========================================================================
+   TABELAS DE DADOS (Histórico do Pet, Exames, Vacinas)
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.2rem;
+    background-color: var(--bg-white);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+thead tr {
+    background-color: var(--vet-primary);
+    color: var(--bg-white);
+}
+
+th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #E2E8F0;
+    transition: background-color 0.2s ease;
+}
+
+/* Efeito zebra bem suave para não poluir a tabela de prontuários */
+tbody tr:nth-of-type(even) {
+    background-color: #F8FAFC;
+}
+
+tbody tr:hover {
+    background-color: #F0F4F8;
+}
+
+/* Botão menor de ação dentro das tabelas (ex: Ver Exame, Detalhes) */
+td button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    width: auto;
+    margin: 0;
+    background-color: var(--vet-primary);
+}
+
+td button:hover {
+    background-color: #114256;
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER) - Estilo Dark Clínico
+   ========================================================================== */
+.rodape {
+    background-color: #222831; /* Grafite escuro limpo, sem parecer pesado */
+    color: #9BA4B5;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    width: 100%;
+    border-top: 4px solid var(--vet-primary); /* Linha de fechamento com a cor principal */
+}
+
+.container-rodape p {
+    margin: 6px 0;
+    font-size: 0.9rem;
+}
+
+.container-rodape p:first-child {
+    color: var(--bg-white);
+    font-weight: bold;
+}
